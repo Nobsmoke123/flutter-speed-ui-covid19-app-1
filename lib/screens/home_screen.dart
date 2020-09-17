@@ -61,11 +61,26 @@ class HomeScreen extends StatelessWidget {
                     Text(
                         'Preventions',
                         style: Theme.of(context).textTheme.title.copyWith(fontWeight: FontWeight.bold),
-
                     ),
+                      SizedBox(height: 20,),
+
                       Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
-                              PreventionCard()
+                              PreventionCard(
+                                  svgSrc: "assets/icons/hand_wash.svg",
+                                  title: "Wash Hands",
+                              ),
+
+                              PreventionCard(
+                                  svgSrc: "assets/icons/use_mask.svg",
+                                  title: "Use Masks",
+                              ),
+
+                              PreventionCard(
+                                  svgSrc: "assets/icons/Clean_Disinfect.svg",
+                                  title: "Clean Disinfect",
+                              ),
                           ],
                       ),
                   ],
@@ -95,16 +110,19 @@ class HomeScreen extends StatelessWidget {
 }
 
 class PreventionCard extends StatelessWidget {
+    final String svgSrc;
+    final String title;
+
   const PreventionCard({
-    Key key,
+    Key key, this.svgSrc, this.title,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
         children: <Widget>[
-            SvgPicture.asset("assets/icons/hand_wash.svg"),
-            Text('Wash Hands', style: Theme.of(context).textTheme.bodyText2.copyWith(color: KPrimaryColor),)
+            SvgPicture.asset(svgSrc),
+            Text(title, style: Theme.of(context).textTheme.bodyText2.copyWith(color: KPrimaryColor),)
         ],
     );
   }
