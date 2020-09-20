@@ -1,9 +1,9 @@
-import 'package:covid19app1/utils/constants.dart';
-import 'package:covid19app1/widgets/info_card.dart';
+import './../widgets/prevention_card.dart';
+import '../utils/constants.dart';
+import '../widgets/info_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import './../widgets/prevention_card.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
           child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
+                Container(
                   padding: const EdgeInsets.only(left: 10, top: 20, right: 10, bottom: 40),
                   width: double.infinity,
                   decoration: BoxDecoration(
@@ -32,28 +32,33 @@ class HomeScreen extends StatelessWidget {
                               title: "Confirmed Case",
                               iconColor: Color(0xFFFF8C00),
                               affectedNum: 1062,
+                              press: (){},
                           ),
 
                           InfoCard(
                               title: "Total Deaths",
                               iconColor: Color(0xFFFF2D55),
                               affectedNum: 75,
+                              press: (){},
                           ),
 
                           InfoCard(
                               title: "Total Recovered",
                               iconColor: Color(0xFF50E3C2),
                               affectedNum: 689,
+                              press: (){},
                           ),
 
                           InfoCard(
                               title: "New Cases",
                               iconColor: Color(0xFF5856D6),
-                              affectedNum: 1062,
+                              affectedNum: 62,
+                              press: (){},
                           )
                       ],
                   ),
               ),
+
                 SizedBox(height: 20,),
 
                 Padding(

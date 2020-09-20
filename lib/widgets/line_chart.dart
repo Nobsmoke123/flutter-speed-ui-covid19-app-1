@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
-import 'package:covid19app1/utils/constants.dart';
+import '../utils/constants.dart';
 
 class LineReportChart extends StatelessWidget {
     @override
