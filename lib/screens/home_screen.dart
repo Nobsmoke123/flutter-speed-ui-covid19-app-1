@@ -1,3 +1,5 @@
+import 'package:covid19app1/screens/details_screen.dart';
+
 import './../widgets/prevention_card.dart';
 import '../utils/constants.dart';
 import '../widgets/info_card.dart';
@@ -6,6 +8,7 @@ import 'package:flutter/painting.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeScreen extends StatelessWidget {
+    static const screenId = 'home_screen';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +35,9 @@ class HomeScreen extends StatelessWidget {
                               title: "Confirmed Case",
                               iconColor: Color(0xFFFF8C00),
                               affectedNum: 1062,
-                              press: (){},
+                              press: (){
+                                  Navigator.of(context).pushNamed(DetailScreen.screenId);
+                              },
                           ),
 
                           InfoCard(
