@@ -1,4 +1,4 @@
-import 'package:covid19app1/utils/constants.dart';
+import '../utils/constants.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 

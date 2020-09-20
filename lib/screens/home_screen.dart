@@ -1,11 +1,10 @@
-import 'package:covid19app1/screens/details_screen.dart';
-
 import './../widgets/prevention_card.dart';
 import '../utils/constants.dart';
 import '../widgets/info_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'details_screen.dart';
 
 class HomeScreen extends StatelessWidget {
     static const screenId = 'home_screen';
@@ -44,21 +43,27 @@ class HomeScreen extends StatelessWidget {
                               title: "Total Deaths",
                               iconColor: Color(0xFFFF2D55),
                               affectedNum: 75,
-                              press: (){},
+                              press: (){
+                                  Navigator.of(context).pushNamed(DetailScreen.screenId);
+                              },
                           ),
 
                           InfoCard(
                               title: "Total Recovered",
                               iconColor: Color(0xFF50E3C2),
                               affectedNum: 689,
-                              press: (){},
+                              press: (){
+                                  Navigator.of(context).pushNamed(DetailScreen.screenId);
+                              },
                           ),
 
                           InfoCard(
                               title: "New Cases",
                               iconColor: Color(0xFF5856D6),
                               affectedNum: 62,
-                              press: (){},
+                              press: (){
+                                  Navigator.of(context).pushNamed(DetailScreen.screenId);
+                              },
                           )
                       ],
                   ),
@@ -73,7 +78,7 @@ class HomeScreen extends StatelessWidget {
                     children: <Widget>[
                       Text(
                           'Preventions',
-                          style: Theme.of(context).textTheme.title.copyWith(fontWeight: FontWeight.bold),
+                          style: Theme.of(context).textTheme.headline6.copyWith(fontWeight: FontWeight.bold),
                       ),
                         SizedBox(height: 20,),
 
@@ -126,7 +131,7 @@ class HomeScreen extends StatelessWidget {
                                               children: [
                                                   TextSpan(
                                                       text: "Dial 999 for Medical Help!\n",
-                                                      style: Theme.of(context).textTheme.title.copyWith(color: Colors.white)
+                                                      style: Theme.of(context).textTheme.headline6.copyWith(color: Colors.white)
                                                   ),
                                                   TextSpan(
                                                       text: "If any symptoms appear",
